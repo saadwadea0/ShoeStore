@@ -6,7 +6,9 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
+        <!--
+                dummy data of instruction1 screen
+        -->
 
         <TextView
             android:id="@+id/instruction1"
@@ -16,6 +18,9 @@
             app:layout_constraintTop_toTopOf="parent"
             style="@style/HeaderTextStyle" />
 
+        <!--
+             Another  dummy data of instruction2 screen
+       -->
         <TextView
             android:id="@+id/instruction2"
             android:text="@string/instruction2"
@@ -24,6 +29,9 @@
             app:layout_constraintTop_toBottomOf="@+id/instruction1"
             style="@style/Header2TextStyle" />
 
+        <!--
+               To navigate shoe list screen
+       -->
         <Button
             android:id="@+id/grabShoe"
             android:layout_marginBottom="@dimen/default_margin"

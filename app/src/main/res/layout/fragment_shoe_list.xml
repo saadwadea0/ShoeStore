@@ -18,6 +18,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <!--
+              To put items in this view
+      -->
             <LinearLayout
                 android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
@@ -30,6 +33,9 @@
 
         </ScrollView>
 
+        <!--
+              button to navigate to item details
+      -->
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fabDetail"

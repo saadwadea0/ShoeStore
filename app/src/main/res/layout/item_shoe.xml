@@ -7,6 +7,9 @@
 
     </data>
 
+    <!--
+              this item of list to display to user in show list fragment
+      -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView"
         android:layout_width="match_parent"

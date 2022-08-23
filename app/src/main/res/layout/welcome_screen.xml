@@ -11,30 +11,39 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <!--
+                dummy data of welcome screen
+        -->
         <TextView
             android:id="@+id/textView"
+            style="@style/HeaderTextStyle"
             android:text="@string/welcome_to_shoe_store"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            style="@style/HeaderTextStyle" />
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <!--
+       Another dummy data of welcome screen
+-->
         <TextView
             android:id="@+id/textView2"
+            style="@style/Header2TextStyle"
             android:text="@string/shoe_store_app"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
-            style="@style/Header2TextStyle" />
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
+        <!--
+       button to Navigate to instruction fragment
+-->
         <Button
             android:id="@+id/btNext"
-            android:text="@string/next"
             style="@style/defaultButtonStyle"
             android:backgroundTint="@color/blue"
+            android:text="@string/next"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -16,6 +16,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <!--
+               input filed to write your email
+       -->
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textInputLayout"
@@ -39,6 +42,9 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
+            <!--
+              input filed to write your password
+      -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tiLayout"
                 style="@style/defaultInputLayoutStyle"
@@ -58,6 +64,9 @@
                     android:inputType="textPassword" />
             </com.google.android.material.textfield.TextInputLayout>
 
+            <!--
+              Two button to navigate to welcome screen
+      -->
             <Button
                 android:id="@+id/btLogin"
                 style="@style/defaultButtonStyle"

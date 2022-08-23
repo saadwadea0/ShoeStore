@@ -23,6 +23,7 @@ class ShoeDetailsFragment : Fragment() {
     ): View {
         binding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_details, container, false)
+
         binding.viewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
         return binding.root
@@ -32,13 +33,15 @@ class ShoeDetailsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.apply {
+            btnCancel.setOnClickListener {
+                navigateToShoeList()
+            }
+            btnSave.setOnClickListener {
+                viewModel?.addingShoeToList()
+                navigateToShoeList()
+            }
 
-        binding.btnCancel.setOnClickListener {
-            navigateToShoeList()
-        }
-        binding.btnSave.setOnClickListener {
-            viewModel.addingShoeToList()
-            navigateToShoeList()
         }
 
     }
