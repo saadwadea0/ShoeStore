@@ -41,7 +41,7 @@
         <action
             android:id="@+id/action_shoeListFragment_to_loginFragment"
             app:destination="@id/loginFragment"
-            app:popUpTo="@id/navigation"
+            app:popUpTo="@id/loginFragment"
             app:popUpToInclusive="true" />
     </fragment>
     <fragment
@@ -49,7 +49,11 @@
         android:name="com.example.shoestore.ShoeDetailsFragment"
         android:label="ShoeDetailsFragment" >
         <action
-            android:id="@+id/action_shoeDetailsFragment_to_shoeListFragment2"
+            android:id="@+id/action_shoeDetailsFragment_to_shoeListFragment"
             app:destination="@id/shoeListFragment" />
+        <argument
+            android:name="shoe"
+            app:argType="string"
+            app:nullable="true" />
     </fragment>
 </navigation>

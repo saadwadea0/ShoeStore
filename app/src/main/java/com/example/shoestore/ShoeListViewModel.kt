@@ -32,4 +32,5 @@ class ShoeListViewModel : ViewModel() {
     private fun isValid():Boolean{
         return !(name.isBlank() || size.isBlank() || company.isBlank() || description.isBlank())
     }
+
 }

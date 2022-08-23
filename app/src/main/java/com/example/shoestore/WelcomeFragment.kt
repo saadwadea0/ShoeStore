@@ -1,6 +1,5 @@
 package com.example.shoestore
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -33,7 +32,7 @@ class WelcomeFragment : Fragment() {
         }
     }
 
-    // navigate from login to welcome
+    // navigate from login to instruction
     private fun navigateToInstructionFragment() {
         findNavController().navigate(WelcomeFragmentDirections.actionWelcomeFragmentToInstructionFragment())
     }

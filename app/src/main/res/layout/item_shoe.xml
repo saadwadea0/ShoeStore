@@ -1,6 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <data>
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:backgroundTint="@color/blue"
+        android:padding="@dimen/small_padding"
+        app:cardCornerRadius="@dimen/default_radius"
+        app:cardElevation="@dimen/default_elevation">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+          <!--  <ImageView
+                android:id="@+id/ivShoe"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:contentDescription="@string/shoe_image"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+-->
+            <TextView
+                android:id="@+id/tvName"
+                style="@style/TextStylePadding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                app:layout_constraintBottom_toTopOf="@+id/tvSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:text="name" />
+
+            <TextView
+                android:id="@+id/tvSize"
+                style="@style/TextStylePadding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                app:layout_constraintBottom_toTopOf="@+id/tvCompany"
+                app:layout_constraintEnd_toEndOf="@id/tvName"
+                app:layout_constraintStart_toStartOf="@id/tvName"
+                app:layout_constraintTop_toBottomOf="@+id/tvName"
+                tools:text="size" />
+
+            <TextView
+                android:id="@+id/tvCompany"
+                style="@style/TextStylePadding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                app:layout_constraintBottom_toTopOf="@+id/tvDescription"
+                app:layout_constraintEnd_toEndOf="@id/tvSize"
+                app:layout_constraintStart_toStartOf="@id/tvSize"
+                app:layout_constraintTop_toBottomOf="@+id/tvSize"
+                tools:text="company" />
+
+            <TextView
+                android:id="@+id/tvDescription"
+                style="@style/TextStylePadding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/tvCompany"
+                app:layout_constraintStart_toStartOf="@id/tvCompany"
+                app:layout_constraintTop_toBottomOf="@+id/tvCompany"
+                tools:text="description" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

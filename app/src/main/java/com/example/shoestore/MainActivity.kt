@@ -4,36 +4,36 @@ import android.os.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.navigation.NavController
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.NavigationUI.setupActionBarWithNavController
+import androidx.navigation.ui.navigateUp
 import com.example.shoestore.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
+    private lateinit var navHostFragment: Fragment
+
+    private val navController by lazy { navHostFragment.findNavController() }
+    private val appBarConfiguration by lazy { AppBarConfiguration(navController.graph) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-
-        val navHostFragment =
-            supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
-        val navController = navHostFragment.navController
-        setupActionBarWithNavController(this@MainActivity, navController)
-
-
+        binding.apply {
+            navHostFragment =
+                supportFragmentManager.findFragmentById(fragmentContainerView.id) as NavHostFragment
+            setupActionBarWithNavController(this@MainActivity, navController, appBarConfiguration)
+        }
     }
 
+    /**
+     * setup navController navigation up with the OS back pressed event listeners
+     * */
     override fun onSupportNavigateUp(): Boolean {
-
-        val navController = this.findNavController(R.id.fragmentContainerView)
-        return navController.navigateUp()
+        return navController.navigateUp() || super.onSupportNavigateUp()
     }
-
 }

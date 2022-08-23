@@ -14,7 +14,6 @@ import com.example.shoestore.databinding.FragmentShoeDetailsBinding
 class ShoeDetailsFragment : Fragment() {
 
 
-
     private val viewModel: ShoeListViewModel by activityViewModels()
     private lateinit var binding: FragmentShoeDetailsBinding
 
@@ -22,7 +21,10 @@ class ShoeDetailsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_details, container, false)
+        binding =
+            DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_details, container, false)
+        binding.viewModel = viewModel
+        binding.lifecycleOwner = viewLifecycleOwner
         return binding.root
     }
 
@@ -30,10 +32,7 @@ class ShoeDetailsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.viewModel = viewModel
-        binding.lifecycleOwner=viewLifecycleOwner
 
-        viewModel
         binding.btnCancel.setOnClickListener {
             navigateToShoeList()
         }
@@ -43,7 +42,8 @@ class ShoeDetailsFragment : Fragment() {
         }
 
     }
+
     private fun navigateToShoeList() {
-        findNavController().navigate(ShoeDetailsFragmentDirections.actionShoeDetailsFragmentToShoeListFragment2())
+        findNavController().navigate(ShoeDetailsFragmentDirections.actionShoeDetailsFragmentToShoeListFragment())
     }
 }
