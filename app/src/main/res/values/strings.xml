@@ -1,3 +1,41 @@
 <resources>
     <string name="app_name">ShoeStore</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="new_account">New Account</string>
+    <string name="login">Login</string>
+    <string name="welcome_to_shoe_store">Welcome to Shoe store</string>
+    <string name="shoe_store_app">Shoe store App</string>
+    <string name="next">Next</string>
+    <string name="instruction1">Welcome to a new shoe item to the collection</string>
+    <string name="instruction2">Wowwwwww</string>
+    <string name="go_to_shopping_list">Go to shopping list</string>
+    <string name="go_to_shoe_list">Go to shoe list</string>
+    <string name="floating_action_button">Show details</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email_hint">Please enter your email</string>
+    <string name="password_hint">Please enter your password</string>
+    <string name="create">Create</string>
+    <string name="hello_there">Hello there!</string>
+    <string name="welcome_icon">Welcome icon</string>
+    <string name="welcome_message">Welcome to a shoe store</string>
+    <string name="_continue">Continue</string>
+
+    <string name="instructions_title">Instructions</string>
+    <string name="instructions">In the next destination you will see a list of shoes.\n\nIf you want to add a custom shoe, \nyou need to press the Add shoe button.\n\nThen you will fill in the following fields: ( name, size, company, description, image)</string>
+    <string name="start">Start</string>
+    <string name="logout">Logout</string>
+
+    <string name="shoe_name_format">Name: %s</string>
+    <string name="shoe_size_format">Size: %s</string>
+    <string name="shoe_company_format">Company: %s</string>
+    <string name="shoe_description_format">Description: %s</string>
+    <string name="shoe_image">Shoe Image</string>
+    <string name="name">Name</string>
+    <string name="company">Company</string>
+    <string name="size">Size</string>
+    <string name="description">Description</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
 </resources>

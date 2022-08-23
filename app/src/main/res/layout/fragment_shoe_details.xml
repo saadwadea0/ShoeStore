@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+
+            <variable
+                name="viewModel"
+                type="com.example.shoestore.ShoeListViewModel" />
+
+    </data>
+
+    <!--
+    we wrapped ConstraintLayout with ScrollView
+    to be able to scroll screen contents when the soft input will appears
+    -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.screens.shoe_detail.ShoeDetailFragment" >
+
+        <!--
+        * we used ConstraintLayout to Build a Responsive UI
+        * and to create a flat hierarchy
+        -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin">
+
+
+            <!-- those below labels and edit texts connected with each others with chains -->
+            <!-- shoe name label -->
+            <TextView
+                android:id="@+id/tvName"
+                style="@style/TextStylePadding"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:text="@string/name"
+                app:layout_constraintBottom_toTopOf="@+id/etName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <!-- shoe name edit text -->
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:autofillHints="name"
+                android:hint="@string/name"
+                android:inputType="text"
+                android:text="@={viewModel.name}"
+                app:layout_constraintBottom_toTopOf="@+id/tvCompany"
+                app:layout_constraintEnd_toEndOf="@id/tvName"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@id/tvName"
+                app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+            <!-- shoe company label -->
+            <TextView
+                android:id="@+id/tvCompany"
+                style="@style/TextStylePadding"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:text="@string/company"
+                app:layout_constraintBottom_toTopOf="@+id/etCompany"
+                app:layout_constraintEnd_toEndOf="@id/etName"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@id/etName"
+                app:layout_constraintTop_toBottomOf="@+id/etName" />
+
+            <!-- shoe company edit text -->
+            <EditText
+                android:id="@+id/etCompany"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:autofillHints="name"
+                android:hint="@string/company"
+                android:inputType="text"
+                android:text="@={viewModel.company}"
+                app:layout_constraintBottom_toTopOf="@+id/tvSize"
+                app:layout_constraintEnd_toEndOf="@id/tvCompany"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@id/tvCompany"
+                app:layout_constraintTop_toBottomOf="@+id/tvCompany" />
+
+            <!-- shoe size label -->
+            <TextView
+                android:id="@+id/tvSize"
+                style="@style/TextStylePadding"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:text="@string/size"
+                app:layout_constraintBottom_toTopOf="@+id/etSize"
+                app:layout_constraintEnd_toEndOf="@id/etCompany"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@id/etCompany"
+                app:layout_constraintTop_toBottomOf="@+id/etCompany" />
+
+            <!-- shoe size edit text -->
+            <EditText
+                android:id="@+id/etSize"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/size"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:text="@={viewModel.size}"
+                app:layout_constraintBottom_toTopOf="@+id/tvDescription"
+                app:layout_constraintEnd_toEndOf="@id/tvSize"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@id/tvSize"
+                app:layout_constraintTop_toBottomOf="@+id/tvSize" />
+
+            <!-- shoe description label -->
+            <TextView
+                android:id="@+id/tvDescription"
+                style="@style/TextStylePadding"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                android:text="@string/description"
+                app:layout_constraintBottom_toTopOf="@+id/etDescription"
+                app:layout_constraintEnd_toEndOf="@id/etSize"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@id/etSize"
+                app:layout_constraintTop_toBottomOf="@+id/etSize" />
+
+            <!-- shoe description edit text -->
+            <EditText
+                android:id="@+id/etDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/description"
+                android:importantForAutofill="no"
+                android:text="@={viewModel.description}"
+                android:inputType="textLongMessage|text|textMultiLine"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/tvDescription"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@id/tvDescription"
+                app:layout_constraintTop_toBottomOf="@+id/tvDescription" />
+
+
+            <!-- those two button below connected to each others with Chains -->
+            <!-- save changes button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSave"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                app:layout_constraintBaseline_toBaselineOf="@+id/btnCancel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btnCancel" />
+
+            <!-- discard changes button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:text="@string/cancel"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnSave"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etDescription"
+                app:layout_constraintVertical_bias="1.0" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</layout>

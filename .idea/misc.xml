@@ -3,7 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/fwd/ShoeStore/app/src/main/res/drawable/ic_add.xml" value="0.14" />
         <entry key="..\:/fwd/ShoeStore/app/src/main/res/layout/activity_main.xml" value="0.16307692307692306" />
+        <entry key="..\:/fwd/ShoeStore/app/src/main/res/layout/fragment_instruction.xml" value="0.22" />
+        <entry key="..\:/fwd/ShoeStore/app/src/main/res/layout/fragment_login.xml" value="0.1648148148148148" />
+        <entry key="..\:/fwd/ShoeStore/app/src/main/res/layout/fragment_shoe_details.xml" value="0.1796875" />
+        <entry key="..\:/fwd/ShoeStore/app/src/main/res/layout/fragment_shoe_list.xml" value="0.1796875" />
+        <entry key="..\:/fwd/ShoeStore/app/src/main/res/layout/item_shoe.xml" value="0.17864583333333334" />
+        <entry key="..\:/fwd/ShoeStore/app/src/main/res/layout/welcome_screen.xml" value="0.17864583333333334" />
       </map>
     </option>
   </component>
